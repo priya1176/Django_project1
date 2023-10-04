@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+        th,td{ padding: 5px;
+               
+        }
+        h1{
+            text-align:center;
+            text-decoration-style: bold;
+            font-siz: 150px;
+           
+            margin-bottom:0px;
+            margin-right:10px;
+             
+             background:rgb(191, 0, 255);
+             padding:15px;
+             width: 15px;
+            
+        }
+        
+
+        
+     </style>
+    </head>
+<body >
+    <div style=" ">
+
+<h1>List of Passengers</h1>
+
+<table id="pass_model" border="1" class="table" class="alert alert-primary">
+    <thead class="alert alert-primary">
+      <tr  style="background-color: #CC99FF ">
+        <th scope="col" style="width:30">Sno</th>
+        <th scope="col" style="width:80">Aadhaar</th>
+        <th scope="col" style="width:80">Passenger Name</th>
+        <th scope="col" style="width:100">Email</th>
+        <th scope="col" style="width:40">Gender</th>
+        <th scope="col" style="width:70">Contact</th>
+        <th scope="col" style="width:80">D.O.B</th>
+        <th scope="col" style="width:50">PIN</th>
+    </div>
+ </tr>
+    </thead>
+    <tbody>
+          {% for i in data %}
+          <form>
+          <tr style="background-color:rgb(0, 191, 255)">  
+                <td style=" background-color: #CC99FF">{{forloop.counter}}</td>
+                <td style="background-color:rgb(204, 204, 255)">{{i.aadhar}}</td>
+                <td style="background-color:rgb(204, 204, 255)">{{i.pname}}</td>
+                <td style="background-color:rgb(204, 204, 255)">{{i.email}}</td>
+                <td style="background-color:rgb(204, 204, 255)">{{i.gender}}</td>
+                <td style="background-color:rgb(204, 204, 255)">{{i.contact}}</td>
+                <td style="background-color:rgb(204, 204, 255)">{{i.dob}}</td>
+                <td style="background-color:rgb(204, 204, 255)">{{i.pin}}</td>
+                
+          </tr>
+          {% endfor %}   
+    </tbody>
+</table>
+</div>
+</body>
